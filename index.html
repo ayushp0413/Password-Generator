@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Generator</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;600&display=swap"
+      rel="stylesheet"
+    />
 </head>
 <body>
 
@@ -17,9 +25,9 @@
             <input readonly placeholder="Password" class="display" data-passwordDisplay>
 
             <button class="copyButton">
-                <span dataCopiedMsg></span>
+                <span class="tooltip" dataCopiedMsg></span>
                 <!-- <i class="fa-regular fa-clone"></i> -->
-                <img src="" alt="copy" width="23" height="23">
+                <img src="./assets/copy.svg" alt="copy" width="23" height="23">
             </button>
 
 
@@ -39,19 +47,19 @@
          
          
             <!-- checkboxes -->
-            <div>
+            <div class="check">
                 <input type="checkbox" name="" id="uppercase">
                 <label for="uppercase">Include Uppercase letters</label>
             </div>
-            <div>
+            <div class="check">
                 <input type="checkbox" name="" id="lowercase">
                 <label for="lowercase">Include Lowercase letters</label>
             </div>
-            <div>
+            <div class="check">
                 <input type="checkbox" name="" id="special">
                 <label for="special">Include Special symbols</label>
             </div>
-            <div>
+            <div class="check">
                 <input type="checkbox" name="" id="number">
                 <label for="number">Include Numbers</label>
             </div>

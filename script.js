@@ -16,6 +16,7 @@ let passward="";
 let passwardLength=10;
 let checkCount=0;
 // uppercaseCheck.checked=true;
+setIndicator("#ccc");
 
 sliderHandler();
 
@@ -45,31 +46,33 @@ function getRandomSymbol(){
 
 //depending upon the strength of pass we will send color to it then it will set color to div
 function setIndicator(color) {
-    dataIndicator.style.backgroundcolor=color;
-    dataIndicator.style.shadow='0px 0px 15px';
+    dataIndicator.style.backgroundColor=color;
+    dataIndicator.style.boxShadow=`0 0 12px 1px ${color}`;
 }
 
 function strengthCheck() {
-
-    let upper=false;
-    let lower=false;
-    let number=false;
-    let symbol=false;
-    if(uppercaseCheck.checked==true) upper=true;
-    if(lowercaseCheck.checked==true) lower=true;
-    if(numberCheck.checked==true) number=true;
-    if(symbolCheck.checked==true) symbol=true; 
-
-    if(upper && lower && (number || symbol) && passLength>=8) {
-        setIndicator("#0f0");
-    }
-    else if((lower || upper) && (number || symbol) && passLength>=6) {
-        setIndicator("#ff0");
-    }
-    else {
-        setIndicator("#f00");
-    }
+        let hasUpper = false;
+        let hasLower = false;
+        let hasNum = false;
+        let hasSym = false;
+        if (uppercaseCheck.checked) hasUpper = true;
+        if (lowercaseCheck.checked) hasLower = true;
+        if (numberCheck.checked) hasNum = true;
+        if (symbolCheck.checked) hasSym = true;
+      
+        if (hasUpper && hasLower && (hasNum || hasSym) && passwardLength >= 8) {
+          setIndicator("#0f0");
+        } else if (
+          (hasLower || hasUpper) &&
+          (hasNum || hasSym) &&
+          passwardLength >= 6
+        ) {
+          setIndicator("#ff0");
+        } else {
+          setIndicator("#f00");
+        }
 }
+    
 
 
 // copy content to clipboard
