@@ -12,7 +12,65 @@
         <div class="heading">
             <h1>Password Generator</h1>
         </div>
+
+        <div class="display-content">
+            <input readonly placeholder="Password" class="display" data-passwordDisplay>
+
+            <button class="copyButton">
+                <span dataCopiedMsg></span>
+                <!-- <i class="fa-regular fa-clone"></i> -->
+                <img src="" alt="copy" width="23" height="23">
+            </button>
+
+
+        </div>
+
+        <div class="input-container">
+
+            <div class="length-conatiner">
+
+                <p>Password Length</p>
+                <p pass-length-number>0</p>
+
+            </div>
+
+            <!-- slide -->
+            <input type="range" min="1" max="20" class="slider" step="1" data-slider>
+         
+         
+            <!-- checkboxes -->
+            <div>
+                <input type="checkbox" name="" id="uppercase">
+                <label for="uppercase">Include Uppercase letters</label>
+            </div>
+            <div>
+                <input type="checkbox" name="" id="lowercase">
+                <label for="lowercase">Include Lowercase letters</label>
+            </div>
+            <div>
+                <input type="checkbox" name="" id="special">
+                <label for="special">Include Special symbols</label>
+            </div>
+            <div>
+                <input type="checkbox" name="" id="number">
+                <label for="number">Include Numbers</label>
+            </div>
+
+            <div class="strength-container">
+                <p>Strength</p>
+                <div class="circle-strength" data-indicator></div>
+            </div>
+
+            <button class="generator-password">
+                Generator Password
+            </button>
+
+        </div>
+
     </div>
+
+    <script src="https://kit.fontawesome.com/bb000397a9.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
     
 </body>
 </html>
